@@ -1,0 +1,10 @@
+Step1-Download virtualbox/vmware
+Step2-Download centos stream 8 (http://mirror.myfahim.com/centos/8-stream/isos/x86_64/)
+Step3-Open virtual box-->click on New-->Type centos in name
+Step4-->Clik on next --?next-->next-->finish(Do not change any default setting)
+Step5-->Clixk on Start
+Step6-->Connect your achine to internet (third option from right)Network and Host
+Step7-->Configure storage(first option right hand size)Installation and Destination
+Step8-->Provide root password(make sure that you remember this password)
+Step9-->Choose Sytem type(gui with server)
+Step10--->Begin installation
