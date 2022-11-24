@@ -14,8 +14,8 @@ Intelii_HeavyFile
 .sass-cache
 
 # Ignore .ppk  files
-.ppk
+*.ppk
 
 
 # Ignore pem  files
-.pem
+*.pem
