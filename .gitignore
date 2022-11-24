@@ -1,0 +1,21 @@
+# Ignore Mac system files
+.DS_store
+
+# Ignore Intelii_HeavyFile folder
+Intelii_HeavyFile
+
+# Ignore all .mp4 files
+*.mp4
+
+# Ignore files related to API keys
+.env
+
+# Ignore SASS config files
+.sass-cache
+
+# Ignore .ppk  files
+.ppk
+
+
+# Ignore pem  files
+.pem
