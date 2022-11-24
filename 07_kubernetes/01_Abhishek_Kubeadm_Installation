@@ -1,0 +1,69 @@
+1.  1st We need to lunch three(3 AWS Instance or VM, Name like: K8Master, K8Slave1, K8Slave2) aws instance(generally know as 3 cluster node) 
+	1.1 => 1-Master => Try to keep t2.mudum (Depand on requirement but try to keep it atleast t2.midum)
+	1.2 => 2 Slub/Node machine => Try to keep t2.micro
+2. Connect All 3 instance and run belo command
+	sudo apt-get update
+	
+
+Kubeadm 
+3.1 Install The Kudeadm on all 3 instance and this 1st create one file through nano with .sh extention like and pest all below command inside the file same it
+	sudo nano MyInstalltionFile.sh
+
+3.2 Copy & pest below command in newaly creaded file	
+
+sudo apt update -y
+sudo apt install docker.io -y
+
+sudo systemctl start docker
+sudo systemctl enable docker
+
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+
+sudo apt update -y
+sudo apt install kubeadm=1.20.0-00 kubectl=1.20.0-00 kubelet=1.20.0-00 -y
+
+3.3 Run the below command for run & install all packages/command which are inside the MyInstalltionFile.sh file
+	bash MyInstalltionFile.sh
+
+
+
+
+4. Master Node : Run only in master
+4.1 Chnage the HostName
+	sudo su
+	hostnamectl set-hostname master
+	exec bash
+
+
+5 kubeadm: run below command in only master
+5.1 kubeadm init through super user (this will generate the join token command which needs to be executed on the worker/slave node)
+	kubeadm init
+
+
+5.2 run as normal user not super
+  	mkdir -p $HOME/.kube
+  	sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  	sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+
+5.3 Deploy CNI in master
+kubectl apply -f https://github.com/weaveworks/weave/releases/download/v2.8.1/weave-daemonset-k8s.yaml
+
+5.4 Go To your worker/slave machine login as super user and pest the complete tocken which generate on master/main machine
+	5.4.1 sudu su
+	5.4.2 cd
+	5.4.3 kubeadm join x.x.x.x --token dqrofv.t1y8jr6odiez5das --discovery-token-ca-cert-hash sha256:150....b65
+
+6.1 run this command in master for Watch connected slave/worker machine
+	kubectl get nodes -w
+
+
+
+
+
+
+
+

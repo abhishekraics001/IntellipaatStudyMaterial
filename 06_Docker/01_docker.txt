@@ -1,0 +1,26 @@
+ 109  apt update
+  110  apt install dokcer.io -y
+  111  apt install docker.io -y
+  112  docker --version
+  113  systemctl status docker
+  114  docker --help
+  115  docker ps -a
+  116  docker container ls -a
+  117  docker pull centos
+  118  docker images
+  119  docker image ls
+  120  history
+
+
+
+
+
+
+
+    1  apt update -y
+    2  apt install apache2 git -y
+    3  cd /var/www/html
+    4  cd
+    5  service apache2 status
+    6  service apache2 start
+    7  history

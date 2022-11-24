@@ -1,0 +1,53 @@
+ 1  apt update
+    2  apt install maven -y
+    3  java --version
+    4  mvn --version
+    5  mvn archetype:generate
+    6  ls
+    7  rm *.java
+    8  ls
+    9  cd myproj/
+   10  ls
+   11  apt install tree
+   12  tree
+   13  cat src/main/java/com/raman/App.java
+   14  cat src/test/java/com/raman/AppTest.java
+   15  cat pom.xml
+   16  ls
+   17  mvn compile
+   18  ls
+   19  ls target/
+   20  mvn test
+   21  ls target/
+   22  ls target/surefire-reports/
+   23  cat target/surefire-reports/com.raman.AppTest.txt
+   24  vi src/test/java/com/raman/AppTest.java
+   25  mvn clean
+   26  ls
+   27  mvn test
+   28  ls target/surefire-reports/
+   29  cat target/surefire-reports/com.raman.AppTest.txt
+   30  vi src/test/java/com/raman/AppTest.java
+   31  mvn clean test
+   32  ls target/
+   33  mvn clean package
+   34  ls
+   35  ls target/
+   36  java -cp target/myproj-1.0-SNAPSHOT.jar com.raman.App
+   37  vi src/main/java/com/raman/App.java
+   38  mvn clean package
+   39  java -cp target/myproj-1.0-SNAPSHOT.jar com.raman.App
+   40  vi src/test/java/com/raman/AppTest.java
+   41  mvn clean package
+   42  ls target/
+   43  vi src/test/java/com/raman/AppTest.java
+   44  mvn clean package
+   45  ls target/
+   46  vi src/test/java/com/raman/AppTest.java
+   47  vi src/main/java/com/raman/App.java
+   48  java -cp target/myproj-1.0-SNAPSHOT.jar com.raman.App
+   49  mvn package
+   50  ls target/
+   51  java -cp target/myproj-1.0-SNAPSHOT.jar com.raman.App
+   52  mvn clean package
+   53  ls target/

@@ -1,0 +1,103 @@
+    1  sudo apt-get update
+    2  mkdir folder1
+    3  ls
+    4  mkdir f2
+    5  ls
+    6  mkdir f3,f4,f6
+    7  mkdir f7 f8 f9
+    8  ls
+    9  cd folder1
+   10  mkdir folder2
+   11  ls
+   12  cd folder2
+   13  mkdir folder3
+   14  cd folder3
+   15  clear
+   16  cd ..
+   17  cd folder2
+   18  cd folder3
+   19  cd ../../
+   20  cd folder2/folder3/
+   21  cd
+   22  cd folder1/folder2/folder3/
+   23  pwd
+   24  cd /home
+   25  ls
+   26  cd ubuntu
+   27  ls
+   28  clear
+   29  ls
+   30  cd folder1
+   31  ls
+   32  cd folder2/folder3/
+   33  cd -
+   34  history
+   35  clear
+   36  cd
+   37  ls
+   38  touch file1
+   39  ls
+   40  cat file1
+   41  echo "this is line1" >file2
+   42  ls
+   43  cat file2
+   44  echo "new content in file2" >file2
+   45  ls
+   46  cat file2
+   47  echo "new line added" >> file2
+   48  cat file2
+   49  echo "3rd line added" >> file2
+   50  cat file2
+   51  clear
+   52  history
+   53  echo "random data"
+   54  clear
+   55  nano file5
+   56  cat file5
+   57  nano file2
+   58  clear
+   59  nano file2
+   60  vi file7
+   61  cat file7
+   62  clear
+   63  ls
+   64  rmdir f3,f4,f6
+   65  rm -r folder1
+   66  ls
+   67  rm -r file1 file2
+   68  rm -r *
+   69  ls
+   70  clear
+   71  nano data
+   72  cat data
+   73  grep hello data
+   74  grep -i hello data
+   75  grep -w hello data
+   76  grep -iw hello data
+   77  grep -o hello data
+   78  clear
+   79  ps
+   80  clear
+   81  mkdir folder1
+   82  ls
+   83  ls -r
+   84  ls -R
+   85  ls -a
+   86  ls -lr
+   87  clear
+   88  ls
+   89  mkdir folder2
+   90  ls
+   91  cp data folder1
+   92  ls
+   93  cd folder1
+   94  ls
+   95  cd
+   96  clear
+   97  ls
+   98  mv data folder2
+   99  ls
+  100  cd folder2
+  101  ls
+  102  sudo su
+  103  history
