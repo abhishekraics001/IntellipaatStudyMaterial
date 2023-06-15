@@ -1,0 +1,27 @@
+- name: "My 1st paybook to install Apache2 web server"
+  hosts: webser
+  become: true
+  tasks:
+    - name: "Install Apache2 package on Manage/Slave Node"
+      apt:
+        name: apache2
+        state: present
+    - name: "Copy file to host server group"
+      copy:
+        src: /tmp/index.html  #file Path of controller node where file is located
+        dest: /var/www/html/index.html #Path of your manage/slave node where you want to keep your file
+
+
+- name: "My Second Playbook"
+  hosts: dbserver
+  become: true
+  tasks:
+    - name: "Install the Db server"
+      apt:
+        name: mysql-server
+        state:  present
+
+
+
+
+        

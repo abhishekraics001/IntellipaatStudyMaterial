@@ -1,0 +1,11 @@
+    1  yum -y update
+    2  sudo dnf update -y
+    3  sudo dnf install -y httpd php php-mysqli mariadb105
+    4  sudo systemctl start httpd
+    5  sudo systemctl enable httpd
+    6  sudo usermod -a -G apache ec2-user
+    7  clear
+    8  history
+
+
+DOwnload Putty: https://www.putty.org/
