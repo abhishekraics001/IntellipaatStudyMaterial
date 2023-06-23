@@ -1,0 +1,148 @@
+ 123  cd BankingApp/
+  124  ls
+  125  git tags
+  126  git tag
+  127  git tag -d release-2
+  128  git tag -d release-3
+  129  git checkout main
+  130  ls
+  131  git log --oneline
+  132  git reset --hard HEAD~2
+  133  git log --oneline
+  134  git push origin main
+  135  git branch
+  136  git branch dev1
+  137  git branch
+  138  git checkout dev1
+  139  git branch
+  140  ls
+  141  git log --oneline
+  142  git checkout -
+  143  git branch -D dev1
+  144  git branch
+  145  git branch dev1
+  146  git checkout dev1
+  147  git checkout -
+  148  git branch
+  149  git branch dev2
+  150  git branch
+  151  git push origin dev1
+  152  git branch
+  153  git push origin dev2
+  154  git checkout dev1
+  155  git pull origin dev1
+  156  git branch
+  157  ls
+  158  git checkout main
+  159  git merge dev1
+  160  ls
+  161  git push origin main
+  162  git checkout dev2
+  163  git pull origin dev2
+  164  ls
+  165  git checkout -
+  166  git merge dev2
+  167  ls
+  168  git log --oneline
+  169  git push origin main
+  170  git checkout dev1
+  171  git merge main
+  172  ls
+  173  git checkout dev2
+  174  git branch
+  175  git merge main
+  176  ls
+  177  git checkout main
+  178  git push origin dev1
+  179  git push origin dev2
+  180  git branch
+  181  git checkout dev1
+  182  ls
+  183  echo "This file is edited by dev1" > deposit.java
+  184  git add .
+  185  git commit -m "dev1 modified deposit file"
+  186  cat deposit.java
+  187  git checkout dev2
+  188  cat deposit.java
+  189  echo "This file is edited by dev2" >deposit.java
+  190  git add .
+  191  git commit -m "dev2 modified deposit file"
+  192  git checkout main
+  193  git merge dev1
+  194  cat deposit.java
+  195  git merge dev2
+  196  git mergetool --tool=vimdiff
+  197  cat deposit.java
+  198  ls
+  199  cat deposit.java.orig
+  200  rm deposit.java.orig
+  201  git status
+  202  git commit -m "merge confilict is resolved"
+  203  cat deposit.java
+  204  git checkout dev1
+  205  git merge main
+  206  cat deposit.java
+  207  git checkout dev2
+  208  git merge main
+  209  cat deposit.java
+  210  git branch
+  211  git checkout main
+  212  git --help
+  213  git log --oneline
+  214  git diff 68a170a 4371dac
+  215  cd ..
+  216  mkdir mr
+  217  cd mr
+  218  git init
+  219  touch m1 m2 m3
+  220  git add .
+  221  git commit -m "m1" m1
+  222  git commit -m "m2" m2
+  223  git commit -m "m3" m3
+  224  git log --oneline
+  225  git branch feature
+  226  git checkout feature
+  227  ls
+  228  git log --oneline
+  229  touch f1
+  230  git add .
+  231  git commit -m "f1"
+  232  git log --oneline
+  233  git checkout -
+  234  touch m4
+  235  git add .
+  236  git commit -m "m4"
+  237  git checkout -
+  238  git merge master
+  239  ls
+  240  git log --oneline
+  241  cd ..
+  242  mkdir rm
+  243  cd rm
+  244  touch m1 m2 m3
+  245  git add .
+  246  git init
+  247  git add .
+  248  git commit -m "m1" m1
+  249  git commit -m "m2" m2
+  250  git commit -m "m3" m3
+  251  git branch feature
+  252  git checkout feature
+  253  ls
+  254  touch f1
+  255  git ad .
+  256  git add .
+  257  git commit -m "f1"
+  258  git log --oneline
+  259  git checkout -
+  260  touch m4
+  261  git add .
+  262  git commit -m "m4"
+  263  git checkout -
+  264  ls
+  265  git log --oneline
+  266  git reabse master
+  267  git rebase master
+  268  ls
+  269  git log --oneline
+  270  history
